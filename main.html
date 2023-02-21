@@ -17,19 +17,24 @@
     <h2>LOCAL STORAGE</h2>
     <p></p>
     <ul class="plates">
-      <li>Loading Storage...</li>
+      <li id="result">Loading Storage...</li>
     </ul>
     <form class="add-items">
-      <input type="text" name="item" placeholder="Item Name" required>
-      <input type="submit" value="+ Add Item">
+      <input type="text" name="item" id="iii" placeholder="Item Name" required>
+      <input type="submit" value="+ Add Item" onclick="get()">
     </form>
   </div>
 
 <script>
+	
   const addItems = document.querySelector('.add-items');
   const itemsList = document.querySelector('.plates');
   const items = [];
-
+	function get(){
+		let res=document.getElementById("result").value;
+	 let i= document.getElementById("iii").value;
+ document.getElementById("result").innerHTML = localStorage.getItem("iii");
+		}
 </script>
 
 
